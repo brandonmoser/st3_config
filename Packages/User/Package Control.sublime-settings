@@ -1,0 +1,25 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Advanced CSV",
+		"Ansible",
+		"Asterisk Config",
+		"BracketHighlighter",
+		"EditorConfig",
+		"Emmet",
+		"Enhanced HTML and CFML",
+		"Git",
+		"GitHub Flavored Markdown Preview",
+		"GitHub Markdown Snippets",
+		"Indent XML",
+		"JSHint Gutter",
+		"Local History",
+		"Package Control",
+		"SideBarEnhancements",
+		"Simple Print Function",
+		"Vagrant"
+	]
+}
