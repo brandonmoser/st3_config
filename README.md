@@ -10,12 +10,15 @@ Before "installing" these settings, make sure you have closed Sublime Text 3. Th
   ```
   $ cd ~/Libary/Application Support/Sublime Text 3/
   ```
+  
 * Ubuntu (Linux)
   ```
   $ cd ~/.config/sublime-text-3/
   ```
+
 * Clone the repo
   ```
   $ git clone git@github.com:brandonmoser/st3_config.git
   ```
+  
 * Start Sublime to confirm changes
