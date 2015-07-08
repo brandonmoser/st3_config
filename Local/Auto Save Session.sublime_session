@@ -649,21 +649,29 @@
 					}
 				},
 				{
-					"contents": "#!/usr/bin/env bash\n\n# This script should add all files from within the Sublime Text 3 configuration directory\n# to a git commit and push them to github.com (origin)\n\nRUN_DATE=$(date +\"%Y%m%d_%H%M%S\")\nLOCATION=\"/dev/null\"\n\ncase \"$(uname -s)\" in\n    \"Darwin\") #Mac OSX\n        LOCATION=\"~/Library/Application\\ Support/Sublime\\ Text\\ 3/\"\n        ;;\n    \"Linux\")\n        echo \"This is Linux\"\n        LOCATION=\"~/.config/sublime-text-3/\"\n        ;;\nesac\n\necho \"Switching to $LOCATION\"\ncd $LOCATION\n\necho \"Adding all files\"\ngit add .\necho \"Committing everything\"\ngit commit -a -m \"Update for $RUN_DATE\"\ngit status\ngit pull --rebase\ngit push\n",
+					"contents": "#!/usr/bin/env bash\n\n# This script should add all files from within the Sublime Text 3 configuration directory\n# to a git commit and push them to github.com (origin)\n\nRUN_DATE=$(date +\"%Y%m%d_%H%M%S\")\nLOCATION=\"/dev/null\"\n\ncase \"$(uname -s)\" in\n    \"Darwin\") #Mac OSX\n        LOCATION=\"~/Library/Application\\ Support/Sublime\\ Text\\ 3/\"\n        ;;\n    \"Linux\")\n        echo \"This is Linux\"\n        LOCATION=\"~/.config/sublime-text-3/\"\n        ;;\nesac\n\necho \"Switching to $LOCATION\"\ncd $LOCATION\n\nif [ \"$(git status -s)\" != \"\" ]; then\n    echo \"Things to update and push to github\"\n    git add .\n    echo \"Committing everything\"\n    git commit -a -m \"Update for $RUN_DATE\"\n    git status\n    git pull --rebase\n    git push\nfi",
 					"file": "/home/brandonmoser/backup_sublime.sh",
 					"file_size": 541,
 					"file_write_time": 130808600067519334,
 					"settings":
 					{
-						"buffer_size": 636,
+						"buffer_size": 723,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"file": "/home/brandonmoser/Sites/GBT/gbt-ansible-playbooks/install-esme.sh",
+					"file": "/home/brandonmoser/.config/sublime-text-3/.gitignore",
 					"settings":
 					{
-						"buffer_size": 209,
+						"buffer_size": 57,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/brandonmoser/Sites/GBT/gbt-ansible-playbooks/install-azul.sh",
+					"settings":
+					{
+						"buffer_size": 208,
 						"line_ending": "Unix"
 					}
 				}
@@ -1146,7 +1154,7 @@
 			"groups":
 			[
 				{
-					"selected": 1,
+					"selected": 2,
 					"sheets":
 					[
 						{
@@ -1234,7 +1242,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
+							"stack_index": 3,
 							"type": "text"
 						},
 						{
@@ -1243,102 +1251,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 636,
+								"buffer_size": 723,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										608,
-										608
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"bh_regions":
-									[
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
-										"bh_c_define",
-										"bh_c_define_center",
-										"bh_c_define_open",
-										"bh_c_define_close",
-										"bh_c_define_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content"
-									],
-									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/home/brandonmoser/Sites/GBT/gbt-ansible-playbooks/install-esme.sh",
-							"semi_transient": true,
-							"settings":
-							{
-								"buffer_size": 209,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										19,
-										19
+										686,
+										686
 									]
 								],
 								"settings":
@@ -1409,6 +1330,180 @@
 								"zoom_level": 1.0
 							},
 							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/brandonmoser/.config/sublime-text-3/.gitignore",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 57,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										57,
+										57
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content"
+									],
+									"syntax": "Packages/Text/Plain text.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/brandonmoser/Sites/GBT/gbt-ansible-playbooks/install-azul.sh",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 208,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content"
+									],
+									"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
 							"type": "text"
 						}
 					]
