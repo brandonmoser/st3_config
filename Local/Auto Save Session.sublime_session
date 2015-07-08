@@ -652,7 +652,7 @@
 					"file": "/home/brandonmoser/backup_sublime.sh",
 					"settings":
 					{
-						"buffer_size": 1162,
+						"buffer_size": 1174,
 						"line_ending": "Unix"
 					}
 				},
@@ -1249,15 +1249,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1162,
+								"buffer_size": 1174,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										711,
-										711
+										1161,
+										1161
 									]
 								],
 								"settings":
