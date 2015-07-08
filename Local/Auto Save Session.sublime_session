@@ -649,13 +649,10 @@
 					}
 				},
 				{
-					"contents": "#!/usr/bin/env bash\n\n# This script should add all files from within the Sublime Text 3 configuration directory\n# to a git commit and push them to github.com (origin)\n\nRUN_DATE=$(date +\"%Y%m%d_%H%M%S\")\nLOCATION=\"/dev/null\"\n\necho \"Home: $HOME\"\n\ncase \"$(uname -s)\" in\n    \"Darwin\") #Mac OSX\n        echo \"This is Mac OSX\"\n        LOCATION=\"$HOME/Library/Application\\ Support/Sublime\\ Text\\ 3/\"\n        ;;\n    \"Linux\")\n        echo \"This is Linux\"\n        LOCATION=\"$HOME/.config/sublime-text-3/\"\n        ;;\nesac\n\n## Switch to the local location based upon OS\ncd $LOCATION\npwd\n\n## Commit anything outstanding\nif [ \"$(git status -s)\" != \"\" ]; then\n    echo \"Things to update and push to github\"\n    git add .\n    echo \"Committing everything\"\n    git commit -a -m \"Update for $RUN_DATE\"\nfi\n\nLOCAL=$(git rev-parse @)\nREMOTE=$(git rev-parse @{u})\nBASE=$(git merge-base @ @{u})\n\nwhile (( $LOCAL != $REMOTE ));\ndo\n    if [ $LOCAL = $BASE ]; then\n        echo \"Need to pull\"\n        git pull --rebase\n    elif [ $REMOTE = $BASE ]; then\n        echo \"Need to push\"\n        git push origin\n    else\n        echo \"Diverged, exiting\"\n        $LOCAL=$REMOTE\n    fi\ndone\n",
 					"file": "/home/brandonmoser/backup_sublime.sh",
-					"file_size": 1170,
-					"file_write_time": 130808613711759148,
 					"settings":
 					{
-						"buffer_size": 1154,
+						"buffer_size": 1162,
 						"line_ending": "Unix"
 					}
 				},
@@ -1252,15 +1249,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1154,
+								"buffer_size": 1162,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1141,
-										1141
+										580,
+										580
 									]
 								],
 								"settings":
