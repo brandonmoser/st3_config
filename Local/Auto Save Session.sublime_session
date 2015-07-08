@@ -649,13 +649,10 @@
 					}
 				},
 				{
-					"contents": "#!/usr/bin/env bash\n\n# This script should add all files from within the Sublime Text 3 configuration directory\n# to a git commit and push them to github.com (origin)\n\nRUN_DATE=$(date +\"%Y%m%d_%H%M%S\")\nLOCATION=\"/dev/null\"\n\ncase \"$(uname -s)\" in\n    \"Darwin\") #Mac OSX\n        LOCATION=\"~/Library/Application\\ Support/Sublime\\ Text\\ 3/\"\n        ;;\n    \"Linux\")\n        echo \"This is Linux\"\n        LOCATION=\"~/.config/sublime-text-3/\"\n        ;;\nesac\n\necho \"Switching to $LOCATION\"\ncd $LOCATION\n\nif [ \"$(git status -s)\" != \"\" ]; then\n    echo \"Things to update and push to github\"\n    git add .\n    echo \"Committing everything\"\n    git commit -a -m \"Update for $RUN_DATE\"\n    git status\n    git pull --rebase\n    git push\nfi",
 					"file": "/home/brandonmoser/backup_sublime.sh",
-					"file_size": 541,
-					"file_write_time": 130808600067519334,
 					"settings":
 					{
-						"buffer_size": 723,
+						"buffer_size": 1052,
 						"line_ending": "Unix"
 					}
 				},
@@ -1154,7 +1151,7 @@
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -1251,15 +1248,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 723,
+								"buffer_size": 1052,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										686,
-										686
+										233,
+										233
 									]
 								],
 								"settings":
@@ -1329,7 +1326,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 0,
 							"type": "text"
 						},
 						{
@@ -1416,7 +1413,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 1,
 							"type": "text"
 						},
 						{
