@@ -13,6 +13,6 @@
     // be more mature focus improvements in the future (maybe similar to iA Writer).
     // "color_scheme": "Packages/MarkdownEditing/MarkdownEditor-Focus.tmTheme",
 
-    "draw_centered": true,
+    "draw_centered": false,
 
 }
