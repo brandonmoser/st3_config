@@ -23,7 +23,12 @@
 		"Package Control",
 		"SideBarEnhancements",
 		"Simple Print Function",
+		"SublimeAsteriskConfig",
 		"Theme - Afterglow",
 		"Theme - Numix"
+	],
+	"repositories":
+	[
+		"https://github.com/pnlarsson/SublimeAsteriskConfig.git"
 	]
 }
