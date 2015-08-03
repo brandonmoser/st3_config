@@ -4,12 +4,10 @@
 	],
 	"installed_packages":
 	[
-		"Advanced CSV",
 		"Ansible",
 		"Asterisk Config",
 		"BracketHighlighter",
 		"Chmod",
-		"EditorConfig",
 		"Emmet",
 		"Enhanced HTML and CFML",
 		"Git",
