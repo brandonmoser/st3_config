@@ -19,6 +19,7 @@ Before "installing" these settings, make sure you have closed Sublime Text 3. Th
 * Windows (Active Directory user)
   ```
   > cd "%USERPROFILE%\AppData\Roaming\Sublime Text 3\"
+  ```
 
 * Clone the repo
   ```
